@@ -9,6 +9,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
 Plugin 'nanotech/jellybeans.vim'
 
@@ -52,5 +53,24 @@ execute pathogen#infect()
 " 높은 값일수록 긴 함수를 만났을 때 처리시간이 오래 걸린다.
 " 0으로 설정하면 제한없이 끝까지 처리.
 let g:clojure_maxlines=100
+let g:airline_theme="base16_pop" 
 
+" To debug in repl.
 nnoremap <F2> :Eval<ENTER>
+
+
+" To change airline theme macro. type theme name at end of line.
+nnoremap <F5> :AirlineTheme 
+
+" comment in clojure.
+map <F4> 0i;<ESC>j
+
+" comment in python.
+map <F3> 0i#<ESC>j
+
+" replace ctrl + b,f to k,j to take adventage of using ctrl + b in tmux.
+map <C-j> <C-f>
+map <C-k> <C-b>
+
+
+
