@@ -69,8 +69,8 @@ nnoremap <F2> :Eval<ENTER>
 
 " To change airline theme macro. type theme name at end of line.
 nnoremap <F5> :AirlineTheme 
-map <F7> i( <ESC>
-map <F8> i) <ESC>
+map <F7> a(<ESC>
+map <F8> a)<ESC>
 
 " Comment in clojure.
 map <F4> 0i;<ESC>j
@@ -82,5 +82,9 @@ map <F3> 0i#<ESC>j
 map <C-j> <C-f>
 map <C-k> <C-b>
 
+" execute at ahead buffet of word to embrace with ().
+" * is cursor.
+" example - *map to (map)*
 
+map <F5> <F7>we<F8>
 
