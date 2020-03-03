@@ -1,4 +1,4 @@
-set nocompatible              " be improved, required set runtimepath^=~/.vim/bundle/ctrlp.vim "filetype off                  " required
+set nocompatible              " be iMproved, required set runtimepath^=~/.vim/bundle/ctrlp.vim "filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -10,15 +10,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/syntastic'
-
-"Plugin 'tpope/vim-fireplace'
-"Plugin 'guns/vim-clojure-static'
-"Plugin 'clojure-vim/async-clj-highlight'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-python/python-syntax'
 
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 
-Plugin 'cormacrelf/vim-colors-github'
+Plugin 'morhetz/gruvbox'
 
 Plugin 'derekwyatt/vim-scala'
 Plugin 'neoclide/coc.nvim',{'branch' :'release'}
@@ -44,9 +42,9 @@ let g:clojure_syntax_keywords = {
     \ }
 
 "color wizard 
-let g:github_colors_soft = 5
-let g:airline_theme = "github"
-colorscheme github
+set background=dark
+colorscheme gruvbox 
+
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
